@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Greetings</title>
+    <style>
+        .url {
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        Use <pre class="url">/hello?userName=< Your_name ></pre> to show your name on page
+    </div>
+    <p th:text="'Hello, ' + ${name} + '!'" />
+</body>
+</html>

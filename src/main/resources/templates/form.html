@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Create Form</title>
+</head>
+<body>
+    <form id="form-element" method="post" th:action="@{/form/}" th:object="${formModel}" onsubmit="clearForm(event.preventDefault())">
+        <div><input th:field="*{name}" id="name" class="form-control" type="text" placeholder="Name" required /></div>
+        <div><input th:field="*{age}" id="age" class="form-control" type="number" required /></div>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+<script type="application/javascript">
+    function clearForm() {
+        console.log("clearing form");
+        document.getElementById("form-element").reset()
+    }
+</script>
+</html>
